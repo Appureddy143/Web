@@ -1,0 +1,120 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.poster,
+.movie_card {
+    box-shadow: 0 0 10px #3895D3 !important;
+}
+
+.flip-card_i {
+    position: relative;
+    background-color: transparent;
+    width: 150px;
+    height: 210px;
+    perspective: 10000px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 168px) {
+    .flip-card_i {
+        width: 60%; /* Take full width on smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .flip-card-back_i {
+        width: 60%; /* Take full width on smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .flip-card_i img {
+        height: auto !important; /* Allow image height to adjust */
+        width: 60% !important; /* Take full width of the container */
+    }
+
+    .flip-card-back_i h1 {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+}
+
+h1 {
+    font-size: 45px;
+}
+
+.flip-card-inner_i {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card_i:hover .flip-card-inner_i {
+    transform: rotateY(180deg);
+}
+
+.btn_i {
+    width: 50px;
+    height: 35px;
+    border: none;
+    border: solid 2px grey;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0);
+    font-size: 1em;
+}
+
+.b1_i,
+.b2_i,
+.b3_i {
+    margin: 5px 0;
+}
+
+.b4_i,
+.trailer_i {
+    width: 100%; /* Take full width on smaller screens */
+    height: 35px;
+    margin-top: 5px;
+    border: none;
+    border: solid 2px white;
+    border-radius: 5px;
+    background-color: #e7e7e7;
+    color: black;
+    font-size: 1em;
+}
+
+.para_i {
+    font-size: 0.2em;
+    margin-bottom: 2 px;
+}
+
+.flip-card-front_i,
+.flip-card-back_i {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.form-group1_i,
+.form-group2_i,
+.form-group3_i {
+    float: none; /* Reset float on smaller screens */
+}
+
+.flip-card-front_i {
+    background-color: #bbb;
+    width: 150px;
+    height: 260px;
+    color: black;
+}
+
+.flip-card-back_i {
+    width: 100%; /* Take full width on smaller screens */
+    height: auto%; /* Allow height to adjust based on content */
+    background-image: linear-gradient(black, #3895D3);
+    color: white;
+    transform: rotateY(180deg);
+}
